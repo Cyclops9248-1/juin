@@ -101,7 +101,7 @@ public class Main extends Application {
 	/**
 	 * 
 	 * @param num1: Premier numéro à additionner
-	 * @param num2: Deuxième Numéto à additionner
+	 * @param num2: Deuxième Numéro à additionner
 	 */
 	void EssayezAfficherResultat(int num1, int num2) {
 		int resultat = num1 + num2;
