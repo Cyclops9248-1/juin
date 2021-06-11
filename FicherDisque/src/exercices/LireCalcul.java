@@ -9,7 +9,9 @@ package exercices;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class LireCalcul {
 	public static void main(String[] args) throws IOException,FileNotFoundException {
@@ -38,6 +40,21 @@ public class LireCalcul {
 		}
 		
 		System.out.println("Somme: " + somme);
+		
+		String fichier = "monResultat";
+		
+		FileWriter ficAEcrire;
+		PrintWriter sortie;
+		
+		try {
+			ficAEcrire = new FileWriter(fichier);
+			sortie = new PrintWriter(ficAEcrire);
+			sortie.print(somme);
+			sortie.close();
+		}
+		catch(IOException e) {
+			System.out.println("Erreur entrée/sortie");
+		}
 		
 		entree.close();
 		ficALire.close();
